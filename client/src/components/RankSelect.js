@@ -1,5 +1,5 @@
 import React from 'react';
-import { Field, reduxForm } from 'redux-form';
+import { Field } from 'redux-form';
 import iron from '../ranked-emblems/Emblem_Iron.png';
 import bronze from '../ranked-emblems/Emblem_Bronze.png';
 import silver from '../ranked-emblems/Emblem_Silver.png';
@@ -14,7 +14,7 @@ class RankSelect extends React.Component {
   render() {
     return (
       <div>
-        <div className="ui equal width grid container">
+        <div className="ui equal width grid">
           <div className="row">
             <div className="column" style={{ textAlign: 'center' }}>
               <img
@@ -26,7 +26,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="iron"
                 />{' '}
               </label>
@@ -42,7 +42,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="bronze"
                 />{' '}
               </label>
@@ -58,7 +58,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="silver"
                 />{' '}
               </label>
@@ -74,7 +74,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="gold"
                 />{' '}
               </label>
@@ -90,7 +90,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="platinum"
                 />{' '}
               </label>
@@ -106,7 +106,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="diamond"
                 />{' '}
               </label>
@@ -122,7 +122,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="master"
                 />{' '}
               </label>
@@ -138,7 +138,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="grandmaster"
                 />{' '}
               </label>
@@ -154,7 +154,7 @@ class RankSelect extends React.Component {
                 <Field
                   name="currentRank"
                   component="input"
-                  type="checkbox"
+                  type="radio"
                   value="challenger"
                 />{' '}
               </label>

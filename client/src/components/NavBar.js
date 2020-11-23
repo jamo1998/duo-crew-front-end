@@ -8,8 +8,8 @@ const NavBar = () => {
         Duo Crew
       </Link>
       <div className="right menu">
-        <Link to="/" className="item">
-          Login
+        <Link to="/users/register" className="item">
+          Register
         </Link>
       </div>
     </div>

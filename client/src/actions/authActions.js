@@ -32,6 +32,36 @@ export const loadUser = () => (dispatch, getState) => {
     });
 };
 
+// Register User
+export const registerUser = (formValues) => async (dispatch) => {
+  // Headers
+  const config = {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  };
+
+  // Request body
+  const body = JSON.stringify(formValues);
+
+  try {
+    const response = await axios.post(
+      'http://localhost:5000/users',
+      body,
+      config
+    );
+
+    dispatch({ type: REGISTER_SUCCESS, payload: response.data });
+  } catch (err) {
+    dispatch(
+      returnErrors(err.response.data, err.response.status, 'REGISTER_FAIL')
+    );
+    dispatch({
+      type: REGISTER_FAIL,
+    });
+  }
+};
+
 // Setup config/headers and token
 export const tokenConfig = (getState) => {
   // Get token from localstorage
